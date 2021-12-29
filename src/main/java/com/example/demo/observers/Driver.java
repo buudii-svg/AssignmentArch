@@ -14,7 +14,7 @@ public class Driver extends User implements DriverObserver {
     public double getDriverBalance() {
         return driverBalance;
     }
-
+//ay haga
     public void setDriverBalance(double driverBalance) {
         this.driverBalance += driverBalance;
     }
