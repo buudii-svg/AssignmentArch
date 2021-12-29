@@ -40,10 +40,10 @@ public class RideController {
     }
 
 
-    // @PutMapping("/rides/{id}")
-    // public Ride get(@PathVariable int id) {
-        
-    // }
+     @PutMapping("/rides/ridesHistory/{id}/addRate")
+     public boolean addRate(@RequestBody Ride r) {
+        return service.addRate(r);
+     }
 
 
     @DeleteMapping("/rides/{id}/delete")

@@ -20,5 +20,6 @@ public interface PeoplePersistence {
 
     public boolean update(User u);
 
+    public boolean login(User u);
 
 }

@@ -35,4 +35,8 @@ public class PeopleService implements IPeopleService {
         return persistence.update(user);
     }
 
+    public boolean login(User u)
+    {
+        return persistence.login(u);
+    }
 }

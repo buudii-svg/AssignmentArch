@@ -38,4 +38,8 @@ public class RidesService implements IRidesService {
         return persistence.getRideHistory(userId);
     }
 
+    public boolean addRate(Ride r)
+    {
+        return persistence.addRate(r);
+    }
 }

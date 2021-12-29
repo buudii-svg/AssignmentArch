@@ -13,4 +13,6 @@ public interface IPeopleService {
     boolean delete(String name);
 
     boolean update(User user);
+
+    boolean login(User u);
 }

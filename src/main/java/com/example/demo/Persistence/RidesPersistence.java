@@ -17,4 +17,6 @@ public interface RidesPersistence {
     boolean delete(int id);
 
     List<Ride> getRideHistory(int userId);
+
+    boolean addRate(Ride r);
 }

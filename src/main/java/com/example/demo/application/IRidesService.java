@@ -14,4 +14,7 @@ public interface IRidesService {
     boolean delete(int id);
 
     List<Ride> getRideHistory(int userId);
+
+    public boolean addRate(Ride r);
+
 }

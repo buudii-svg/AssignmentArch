@@ -2,6 +2,7 @@ package com.example.demo.Persistence;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import com.example.demo.Core.Ride;
 
@@ -53,6 +54,18 @@ public class ArrayRidesPersistence implements RidesPersistence {
             }
         }
         return r;
+    }
+
+
+    public boolean addRate(Ride r)
+    {
+        for (Ride ride : allRides) {
+            if (ride.getId() == r.getId()) {
+                ride.setRate(r.getRate());
+                return true;
+            }
+        }
+        return false;
     }
 
 }

@@ -16,11 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class PeopleController {
-    private IPeopleService peopleService;
+    private IPeopleService peopleService = new PeopleService();
 
-    public PeopleController() {
-        peopleService = new PeopleService();
-    }
     
     @GetMapping("/people")
     public List<User> getAll() {
@@ -46,4 +43,9 @@ public class PeopleController {
     public boolean update(@PathVariable String name) {
         return peopleService.delete(name);
     }
+    @PostMapping("/people/login")
+    public boolean login(@RequestBody User u) {
+        return peopleService.login(u);
+    }
+
 }

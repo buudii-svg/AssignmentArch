@@ -25,7 +25,6 @@ public class ArrayPeoplePersistence implements PeoplePersistence {
                 return user;
             }
         }
-
         return null;
     }
 
@@ -50,6 +49,16 @@ public class ArrayPeoplePersistence implements PeoplePersistence {
         for (User user : users) {
             if (user.getName().equals(u.getName())) {
                 user.setAge(u.getAge());
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public boolean login(User u) {
+        for (User user : users) {
+            if ( user.getPassword().equals(u.getPassword()) && user.getId() == u.getId()) {
                 return true;
             }
         }

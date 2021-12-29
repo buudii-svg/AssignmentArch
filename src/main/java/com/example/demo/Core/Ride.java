@@ -13,15 +13,30 @@ public class Ride implements RideSubject {
     private String dest;
     private ArrayList<Offer> offers;
     private ArrayList<PassengerObserver> observers;
-    private float rate;
+    private int rate;
     private int passengerId;
     private int driverId;
-
+    private boolean status;
     public Ride(String source, String dest, int passengerId) {
         this.source = source;
         this.dest = dest;
         this.passengerId = passengerId;
+        this.rate = 0;
         observers = new ArrayList<>();
+    }
+
+    public void isFinished()
+    {
+        this.status = false;
+    }
+    public void isStarted()
+    {
+        this.status = true;
+    }
+
+    public boolean getStatus()
+    {
+        return status;
     }
 
     public int getPassengerId() {
@@ -44,11 +59,11 @@ public class Ride implements RideSubject {
         this.id = id;
     }
 
-    public float getRate() {
+    public int getRate() {
         return rate;
     }
 
-    public void setRate(float rate) {
+    public void setRate(int rate) {
         this.rate = rate;
     }
 
