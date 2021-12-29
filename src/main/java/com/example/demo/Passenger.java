@@ -2,6 +2,8 @@ package com.example.demo;
 
 import java.util.ArrayList;
 
+import com.example.demo.Core.User;
+
 public class Passenger extends User implements PassengerObserver {
 
     private int userID;
@@ -14,8 +16,8 @@ public class Passenger extends User implements PassengerObserver {
         this.userID = userID;
     }
 
-    public Passenger(String name, String mobileNum, String email, String password) {
-        super(name, mobileNum, email, password);
+    public Passenger(int age, String name, String mobileNum, String email, String password) {
+        super(age,name, mobileNum, email, password);
     }
 
 

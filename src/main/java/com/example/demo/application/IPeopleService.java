@@ -1,16 +1,16 @@
 package com.example.demo.application;
 
 import java.util.List;
-import com.example.demo.Core.Person;
+import com.example.demo.Core.User;
 
 public interface IPeopleService {
-    boolean add(Person person);
+    boolean add(User User);
 
-    Person get(String name);
+    User get(String name);
 
-    List<Person> getAll();
+    List<User> getAll();
 
     boolean delete(String name);
 
-    boolean update(Person person);
+    boolean update(User user);
 }

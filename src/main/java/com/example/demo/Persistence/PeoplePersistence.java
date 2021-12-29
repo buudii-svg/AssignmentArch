@@ -2,16 +2,16 @@ package com.example.demo.Persistence;
 
 import java.util.List;
 
-import com.example.demo.Core.Person;
+import com.example.demo.Core.User;
 public interface PeoplePersistence {
 
     public int getNextId();
 
-    boolean add(Person person);
+    boolean add(User person);
 
-    Person get(String name);
+    User get(String name);
 
-    List<Person> getAll();
+    List<User> getAll();
 
     boolean delete(String name);
 

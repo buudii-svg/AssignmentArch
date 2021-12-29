@@ -2,6 +2,8 @@ package com.example.demo;
 
 import java.util.ArrayList;
 
+import com.example.demo.Core.User;
+
 public class UserManager {
 
     private User user;

@@ -2,6 +2,8 @@ package com.example.demo;
 
 import java.util.ArrayList;
 
+import com.example.demo.Core.User;
+
 public class Driver extends User implements DriverObserver {
 
     private String driverLicense;
@@ -35,9 +37,9 @@ public class Driver extends User implements DriverObserver {
         this.userID = userID;
     }
 
-    public Driver(String name, String mobileNum, String email, String password, String driverLicense,
+    public Driver(int age,String name, String mobileNum, String email, String password, String driverLicense,
             String national_Id) {
-        super(name, mobileNum, email, password);
+        super(age, name, mobileNum, email, password);
         this.driverLicense = driverLicense;
         this.national_Id = national_Id;
     }

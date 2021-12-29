@@ -3,28 +3,28 @@ package com.example.demo.Persistence;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.demo.Core.Person;
+import com.example.demo.Core.User;
 public class ArrayPeoplePersistence implements PeoplePersistence {
 
 
 
-    private static List<Person> allPersons = new ArrayList<Person>();
+    private static List<User> allUsers = new ArrayList<User>();
 
     @Override
     public int getNextId() {
-        return allPersons.size();
+        return allUsers.size();
     }
 
     @Override
-    public boolean add(Person person) {
-        return allPersons.add(person);
+    public boolean add(User user) {
+        return allUsers.add(user);
     }
 
     @Override
-    public Person get(String name) {
-        for (Person person : allPersons) {
-            if (person.getName() == name) {
-                return person;
+    public User get(String name) {
+        for (User user : allUsers) {
+            if (user.getName() == name) {
+                return user;
             }
         }
 
@@ -32,15 +32,15 @@ public class ArrayPeoplePersistence implements PeoplePersistence {
     }
 
     @Override
-    public List<Person> getAll() {
-        return allPersons;
+    public List<User> getAll() {
+        return allUsers;
     }
 
     @Override
     public boolean delete(String name) {
-        for (Person person : allPersons) {
-            if (person.getName() == name) {
-                return allPersons.remove(person);
+        for (User user : allUsers) {
+            if (user.getName() == name) {
+                return allUsers.remove(user);
             }
         }
 

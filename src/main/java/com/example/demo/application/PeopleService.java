@@ -3,21 +3,21 @@ package com.example.demo.application;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.demo.Core.Person;
+import com.example.demo.Core.User;
 
 public class PeopleService implements IPeopleService {
-    private static List<Person> peopleRepo = new ArrayList<Person>();
+    private static List<User> peopleRepo = new ArrayList<User>();
 
     @Override
-    public boolean add(Person person) {
-        return peopleRepo.add(person);
+    public boolean add(User user) {
+        return peopleRepo.add(user);
     }
 
     @Override
-    public Person get(String name) {
-        for (Person person : peopleRepo) {
-            if (person.getName().equals(name)) {
-                return person;
+    public User get(String name) {
+        for (User user : peopleRepo) {
+            if (user.getName().equals(name)) {
+                return user;
             }
         }
 
@@ -25,15 +25,15 @@ public class PeopleService implements IPeopleService {
     }
 
     @Override
-    public List<Person> getAll() {
+    public List<User> getAll() {
         return peopleRepo;
     }
 
     @Override
     public boolean delete(String name) {
-        for (Person person : peopleRepo) {
-            if (person.getName().equals(name)) {
-                return peopleRepo.remove(person);
+        for (User user : peopleRepo) {
+            if (user.getName().equals(name)) {
+                return peopleRepo.remove(user);
             }
         }
 
@@ -41,10 +41,10 @@ public class PeopleService implements IPeopleService {
     }
 
     @Override
-    public boolean update(Person p) {
-        for (Person person : peopleRepo) {
-            if (person.getName().equals(p.getName())) {
-                person.setAge(p.getAge());
+    public boolean update(User u) {
+        for (User user : peopleRepo) {
+            if (user.getName().equals(u.getName())) {
+                user.setAge(u.getAge());
                 return true;
             }
         }

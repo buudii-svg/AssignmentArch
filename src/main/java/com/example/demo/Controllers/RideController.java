@@ -4,7 +4,7 @@ import java.net.http.HttpResponse;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.demo.Core.Person;
+import com.example.demo.Core.User;
 import com.example.demo.Core.Ride;
 import com.example.demo.application.IPeopleService;
 import com.example.demo.application.IRidesService;

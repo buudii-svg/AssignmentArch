@@ -2,7 +2,7 @@ package com.example.demo.Controllers;
 
 import java.util.List;
 
-import com.example.demo.Core.Person;
+import com.example.demo.Core.User;
 import com.example.demo.application.IPeopleService;
 import com.example.demo.application.PeopleService;
 
@@ -23,23 +23,23 @@ public class PeopleController {
     }
     
     @GetMapping("/people")
-    public List<Person> getAll() {
+    public List<User> getAll() {
         return peopleService.getAll();
     }
 
     @GetMapping("/people/{name}")
-    public Person get(@PathVariable String name) {
+    public User get(@PathVariable String name) {
         return peopleService.get(name);
     }
 
     @PostMapping("/people")
-    public boolean add(@RequestBody Person p) {
-        return peopleService.add(p);
+    public boolean add(@RequestBody User u) {
+        return peopleService.add(u);
     }
 
     @PutMapping("/people")
-    public boolean update(@RequestBody Person p) {
-        return peopleService.update(p);
+    public boolean update(@RequestBody User u) {
+        return peopleService.update(u);
     }
 
     @DeleteMapping("/people/{name}/delete")
