@@ -18,6 +18,7 @@ public class Driver extends User implements DriverObserver {
     public void setDriverBalance(double driverBalance) {
         this.driverBalance += driverBalance;
     }
+    // driver comment
 
     public boolean isPending() {
         return pending;
