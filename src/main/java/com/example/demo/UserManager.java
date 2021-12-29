@@ -3,6 +3,7 @@ package com.example.demo;
 import java.util.ArrayList;
 
 import com.example.demo.Core.User;
+import com.example.demo.observers.Driver;
 
 public class UserManager {
 
@@ -12,10 +13,9 @@ public class UserManager {
         return pendingReg;
     }
 
-    private ArrayList<User> pendingReg=new ArrayList<User>();
+    private ArrayList<User> pendingReg = new ArrayList<User>();
 
-    public void setPendingReg(User user)
-    {
+    public void setPendingReg(User user) {
         pendingReg.add(user);
     }
 
@@ -27,23 +27,21 @@ public class UserManager {
         return user;
     }
 
-    //Persistance persistance = new UserSavings();
+    // Persistance persistance = new UserSavings();
 
     public void register() {
         if (user instanceof Driver) {
             if (((Driver) user).isPending() == false) {
-               // persistance.create(user);
+                // persistance.create(user);
             } else {
-                //do nothing
+                // do nothing
             }
-        }
-        else
-        {
-            //persistance.create(user);
+        } else {
+            // persistance.create(user);
         }
     }
 
     public void login() {
-        //persistance.read(user);
+        // persistance.read(user);
     }
 }

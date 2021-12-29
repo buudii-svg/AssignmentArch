@@ -2,9 +2,9 @@ package com.example.demo.Core;
 
 import java.util.ArrayList;
 
-import com.example.demo.RideSubject;
 import com.example.demo.Offer;
-import com.example.demo.PassengerObserver;
+import com.example.demo.observers.PassengerObserver;
+import com.example.demo.observers.RideSubject;
 
 public class Ride implements RideSubject {
 
@@ -17,16 +17,17 @@ public class Ride implements RideSubject {
     private int passengerId;
     private int driverId;
 
-
     public Ride(String source, String dest, int passengerId) {
         this.source = source;
         this.dest = dest;
         this.passengerId = passengerId;
         observers = new ArrayList<>();
     }
+
     public int getPassengerId() {
         return passengerId;
     }
+
     public int getDriverId() {
         return driverId;
     }
@@ -46,6 +47,7 @@ public class Ride implements RideSubject {
     public float getRate() {
         return rate;
     }
+
     public void setRate(float rate) {
         this.rate = rate;
     }
@@ -83,7 +85,7 @@ public class Ride implements RideSubject {
 
     public void notifyObservers() {
         for (PassengerObserver o : observers) {
-            // o.update(this.source, this.dest, this.offers);
+            o.update(this.offers);
         }
     }
 

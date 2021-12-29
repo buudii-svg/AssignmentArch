@@ -1,15 +1,14 @@
 package com.example.demo;
 
+import com.example.demo.observers.Driver;
+
 public class Admin {
 
     private UserManager usermanager;
 
-
     public void verifyDriver() {
-        if(usermanager.getUser() instanceof Driver)
-        {
-            if(((Driver) usermanager.getUser()).isPending())
-            {
+        if (usermanager.getUser() instanceof Driver) {
+            if (((Driver) usermanager.getUser()).isPending()) {
                 ((Driver) usermanager.getUser()).setPending(false);
                 System.out.println("admin has accepted your registeration");
             }
@@ -17,8 +16,7 @@ public class Admin {
     }
 
     public void listDriverPendingRegisteration() {
-        for(int i=0; i< usermanager.getPendingReg().size(); i++)
-        {
+        for (int i = 0; i < usermanager.getPendingReg().size(); i++) {
             System.out.println(usermanager.getPendingReg().get(i).getName());
         }
     }

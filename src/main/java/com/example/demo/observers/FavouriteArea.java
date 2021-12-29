@@ -1,11 +1,15 @@
-package com.example.demo;
+package com.example.demo.observers;
 
 import java.util.ArrayList;
 
-public class FavouriteArea implements FavAreaSubject{
+public class FavouriteArea implements FavAreaSubject {
     private String name;
     private ArrayList<DriverObserver> observers;
+    private ArrayList<Driver> drivers;
 
+    public void setDriver(Driver d) {
+        drivers.add(d);
+    }
 
     public String getName() {
         return name;
@@ -17,15 +21,13 @@ public class FavouriteArea implements FavAreaSubject{
 
     public void notifyObservers() {
         for (DriverObserver o : observers) {
-           o.update(this.name);
+            o.update(this.name);
         }
     }
-
 
     public void registerObserver(DriverObserver o) {
         observers.add(o);
     }
-
 
     public void removeObserver(DriverObserver o) {
         int i = observers.indexOf(o);
@@ -33,5 +35,5 @@ public class FavouriteArea implements FavAreaSubject{
             observers.remove(i);
         }
     }
-    
+
 }

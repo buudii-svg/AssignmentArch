@@ -1,6 +1,4 @@
-package com.example.demo;
-
-import java.util.ArrayList;
+package com.example.demo.observers;
 
 import com.example.demo.Core.User;
 
@@ -9,7 +7,7 @@ public class Driver extends User implements DriverObserver {
     private String driverLicense;
     private String national_Id;
     private int userID;
-    //private ArrayList<FavouriteArea> favAreas;
+    // private ArrayList<FavouriteArea> favAreas;
     private boolean pending = true;
     private double driverBalance;
 
@@ -37,7 +35,7 @@ public class Driver extends User implements DriverObserver {
         this.userID = userID;
     }
 
-    public Driver(int age,String name, String mobileNum, String email, String password, String driverLicense,
+    public Driver(int age, String name, String mobileNum, String email, String password, String driverLicense,
             String national_Id) {
         super(age, name, mobileNum, email, password);
         this.driverLicense = driverLicense;
@@ -45,7 +43,7 @@ public class Driver extends User implements DriverObserver {
     }
 
     // public void addFavArea(FavouriteArea fav) {
-    //     favAreas.add(fav);
+    // favAreas.add(fav);
     // }
 
     public String getDriverLicense() {
@@ -57,17 +55,17 @@ public class Driver extends User implements DriverObserver {
     }
 
     // public void listFavAreas() {
-    //     for (int i = 0; i < favAreas.size(); i++) {
-    //         System.out.println(favAreas.get(i));
-    //     }
+    // for (int i = 0; i < favAreas.size(); i++) {
+    // System.out.println(favAreas.get(i));
+    // }
     // }
 
     @Override
     public void update(String area) {
         // for (FavouriteArea i : favAreas)
-        //     if (i.getName() == area) {
-        //         System.out.println("Fav Area detected");
-        //     }
+        // if (i.getName() == area) {
+        // System.out.println("Fav Area detected");
+        // }
 
     }
 }
