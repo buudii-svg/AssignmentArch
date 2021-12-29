@@ -26,7 +26,6 @@ public class ArrayRidesPersistence implements RidesPersistence {
                 return ride;
             }
         }
-
         return null;
     }
 
@@ -44,6 +43,16 @@ public class ArrayRidesPersistence implements RidesPersistence {
         }
 
         return false;
+    }
+
+    public List<Ride> getRideHistory(int userId) {
+        List<Ride> r = new ArrayList<>();
+        for (Ride ride : allRides) {
+            if (ride.getPassengerId() == userId || ride.getDriverId() == userId) {
+                    r.add(ride);
+            }
+        }
+        return r;
     }
 
 }

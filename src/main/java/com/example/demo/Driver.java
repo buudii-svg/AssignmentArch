@@ -9,7 +9,7 @@ public class Driver extends User implements DriverObserver {
     private String driverLicense;
     private String national_Id;
     private int userID;
-    private ArrayList<FavouriteArea> favAreas;
+    //private ArrayList<FavouriteArea> favAreas;
     private boolean pending = true;
     private double driverBalance;
 
@@ -44,9 +44,9 @@ public class Driver extends User implements DriverObserver {
         this.national_Id = national_Id;
     }
 
-    public void addFavArea(FavouriteArea fav) {
-        favAreas.add(fav);
-    }
+    // public void addFavArea(FavouriteArea fav) {
+    //     favAreas.add(fav);
+    // }
 
     public String getDriverLicense() {
         return driverLicense;
@@ -56,18 +56,18 @@ public class Driver extends User implements DriverObserver {
         return national_Id;
     }
 
-    public void listFavAreas() {
-        for (int i = 0; i < favAreas.size(); i++) {
-            System.out.println(favAreas.get(i));
-        }
-    }
+    // public void listFavAreas() {
+    //     for (int i = 0; i < favAreas.size(); i++) {
+    //         System.out.println(favAreas.get(i));
+    //     }
+    // }
 
     @Override
     public void update(String area) {
-        for (FavouriteArea i : favAreas)
-            if (i.getName() == area) {
-                System.out.println("Fav Area detected");
-            }
+        // for (FavouriteArea i : favAreas)
+        //     if (i.getName() == area) {
+        //         System.out.println("Fav Area detected");
+        //     }
 
     }
 }

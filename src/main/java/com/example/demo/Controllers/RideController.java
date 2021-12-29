@@ -42,12 +42,18 @@ public class RideController {
 
     // @PutMapping("/rides/{id}")
     // public Ride get(@PathVariable int id) {
-    //     return service.get(id);
+        
     // }
 
 
     @DeleteMapping("/rides/{id}/delete")
     public boolean delete(@PathVariable int id) {
         return service.delete(id);
+    }
+
+    @GetMapping("/rides/ridesHistory/{userId}")
+    public List<Ride> getRideHistory(@PathVariable int userId)
+    {
+        return service.getRideHistory(userId); 
     }
 }

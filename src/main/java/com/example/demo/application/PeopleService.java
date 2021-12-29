@@ -1,55 +1,38 @@
 package com.example.demo.application;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.example.demo.Core.User;
+import com.example.demo.Persistence.ArrayPeoplePersistence;
+import com.example.demo.Persistence.PeoplePersistence;
 
 public class PeopleService implements IPeopleService {
-    private static List<User> peopleRepo = new ArrayList<User>();
+    private PeoplePersistence persistence = new ArrayPeoplePersistence();
 
-    @Override
-    public boolean add(User user) {
-        return peopleRepo.add(user);
+    public boolean add(User user)
+    {
+        user.setId(persistence.getNextId());
+        return persistence.add(user);
     }
 
-    @Override
-    public User get(String name) {
-        for (User user : peopleRepo) {
-            if (user.getName().equals(name)) {
-                return user;
-            }
-        }
-
-        return null;
+    public User get(String name)
+    {
+        return persistence.get(name);
     }
 
-    @Override
-    public List<User> getAll() {
-        return peopleRepo;
+    public List<User> getAll()
+    {
+        return persistence.getAll();
     }
 
-    @Override
-    public boolean delete(String name) {
-        for (User user : peopleRepo) {
-            if (user.getName().equals(name)) {
-                return peopleRepo.remove(user);
-            }
-        }
-
-        return false;
+    public boolean delete(String name)
+    {
+        return persistence.delete(name);
     }
 
-    @Override
-    public boolean update(User u) {
-        for (User user : peopleRepo) {
-            if (user.getName().equals(u.getName())) {
-                user.setAge(u.getAge());
-                return true;
-            }
-        }
-
-        return false;
+    public boolean update(User user)
+    {
+        return persistence.update(user);
     }
 
 }

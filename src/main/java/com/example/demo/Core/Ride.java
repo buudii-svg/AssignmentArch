@@ -3,12 +3,8 @@ package com.example.demo.Core;
 import java.util.ArrayList;
 
 import com.example.demo.RideSubject;
-import com.example.demo.DriverObserver;
 import com.example.demo.Offer;
 import com.example.demo.PassengerObserver;
-import com.example.demo.RideSubject;
-import com.example.demo.Calculator;
-import java.util.ArrayList;
 
 public class Ride implements RideSubject {
 
@@ -17,21 +13,41 @@ public class Ride implements RideSubject {
     private String dest;
     private ArrayList<Offer> offers;
     private ArrayList<PassengerObserver> observers;
+    private float rate;
+    private int passengerId;
+    private int driverId;
 
 
-    public Ride(String source, String dest) {
+    public Ride(String source, String dest, int passengerId) {
         this.source = source;
         this.dest = dest;
+        this.passengerId = passengerId;
         observers = new ArrayList<>();
+    }
+    public int getPassengerId() {
+        return passengerId;
+    }
+    public int getDriverId() {
+        return driverId;
+    }
+
+    public void setDriverId(int driverId) {
+        this.driverId = driverId;
     }
 
     public int getId() {
         return id;
     }
 
-
     public void setId(int id) {
         this.id = id;
+    }
+
+    public float getRate() {
+        return rate;
+    }
+    public void setRate(float rate) {
+        this.rate = rate;
     }
 
     public String getSource() {
@@ -51,8 +67,7 @@ public class Ride implements RideSubject {
     }
 
     public void setOffers(Offer offer) {
-        if(offer != null)
-        {
+        if (offer != null) {
             this.offers.add(offer);
             notifyObservers();
         }
@@ -66,18 +81,15 @@ public class Ride implements RideSubject {
         notifyObservers();
     }
 
-
     public void notifyObservers() {
         for (PassengerObserver o : observers) {
-           // o.update(this.source, this.dest, this.offers);
+            // o.update(this.source, this.dest, this.offers);
         }
     }
-
 
     public void registerObserver(PassengerObserver o) {
         observers.add(o);
     }
-
 
     public void removeObserver(PassengerObserver o) {
         int i = observers.indexOf(o);
@@ -87,4 +99,3 @@ public class Ride implements RideSubject {
     }
 
 }
-

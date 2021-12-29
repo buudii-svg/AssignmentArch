@@ -3,7 +3,7 @@ package com.example.demo.application;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.demo.Core.User;
+
 import com.example.demo.Core.Ride;
 import com.example.demo.Persistence.ArrayRidesPersistence;
 import com.example.demo.Persistence.RidesPersistence;
@@ -19,8 +19,7 @@ public class RidesService implements IRidesService {
 
     @Override
     public Ride get(int id) {
-        // TODO Auto-generated method stub
-        return null;
+        return persistence.get(id);
     }
 
     @Override
@@ -32,6 +31,11 @@ public class RidesService implements IRidesService {
     public boolean delete(int id) {
         // TODO Auto-generated method stub
         return false;
+    }
+
+    public List<Ride> getRideHistory(int userId)
+    {
+        return persistence.getRideHistory(userId);
     }
 
 }

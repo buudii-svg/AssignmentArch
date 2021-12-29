@@ -1,18 +1,24 @@
 package com.example.demo.Persistence;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import com.example.demo.Core.Ride;
 import com.example.demo.Core.User;
+
 public interface PeoplePersistence {
+
+    public boolean add(User user);
+
+    public User get(String name);
+
+    public List<User> getAll();
 
     public int getNextId();
 
-    boolean add(User person);
+    public boolean delete(String name);
 
-    User get(String name);
+    public boolean update(User u);
 
-    List<User> getAll();
-
-    boolean delete(String name);
 
 }
