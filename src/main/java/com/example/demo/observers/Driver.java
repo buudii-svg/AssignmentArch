@@ -14,6 +14,7 @@ public class Driver extends User implements DriverObserver {
     public double getDriverBalance() {
         return driverBalance;
     }
+
     public void setDriverBalance(double driverBalance) {
         this.driverBalance += driverBalance;
     }
@@ -64,7 +65,7 @@ public class Driver extends User implements DriverObserver {
     public void update(String area) {
         // for (FavouriteArea i : favAreas)
         // if (i.getName() == area) {
-        // System.out.println("Fav Area detected");
+        System.out.println("Fav Area detected" + area);
         // }
 
     }
