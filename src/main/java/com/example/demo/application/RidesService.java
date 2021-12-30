@@ -1,8 +1,6 @@
 package com.example.demo.application;
 
-import java.util.ArrayList;
 import java.util.List;
-
 
 import com.example.demo.Core.Ride;
 import com.example.demo.Persistence.ArrayRidesPersistence;
@@ -33,13 +31,11 @@ public class RidesService implements IRidesService {
         return false;
     }
 
-    public List<Ride> getRideHistory(int userId)
-    {
+    public List<Ride> getRideHistory(int userId) {
         return persistence.getRideHistory(userId);
     }
 
-    public boolean addRate(Ride r)
-    {
+    public boolean addRate(Ride r) {
         return persistence.addRate(r);
     }
 }

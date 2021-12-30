@@ -1,10 +1,9 @@
 package com.example.demo.Controllers;
 
 import java.util.List;
-
-import com.example.demo.Core.User;
 import com.example.demo.application.IPeopleService;
 import com.example.demo.application.PeopleService;
+import com.example.demo.observers.Passenger;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,34 +17,34 @@ import org.springframework.web.bind.annotation.RestController;
 public class PeopleController {
     private IPeopleService peopleService = new PeopleService();
 
-    
-    @GetMapping("/people")
-    public List<User> getAll() {
+    @GetMapping("/passenger")
+    public List<Passenger> getAll() {
         return peopleService.getAll();
     }
 
-    @GetMapping("/people/{name}")
-    public User get(@PathVariable String name) {
+    @GetMapping("/passenger/{name}")
+    public Passenger get(@PathVariable String name) {
         return peopleService.get(name);
     }
 
-    @PostMapping("/people")
-    public boolean add(@RequestBody User u) {
-        return peopleService.add(u);
+    @PostMapping("/passenger")
+    public boolean add(@RequestBody Passenger P) {
+        return peopleService.add(P);
     }
 
-    @PutMapping("/people")
-    public boolean update(@RequestBody User u) {
-        return peopleService.update(u);
+    @PutMapping("/passenger")
+    public boolean update(@RequestBody Passenger P) {
+        return peopleService.update(P);
     }
 
-    @DeleteMapping("/people/{name}/delete")
+    @DeleteMapping("/passenger/{name}/delete")
     public boolean update(@PathVariable String name) {
         return peopleService.delete(name);
     }
-    @PostMapping("/people/login")
-    public boolean login(@RequestBody User u) {
-        return peopleService.login(u);
+
+    @PostMapping("/passenger/login")
+    public boolean login(@RequestBody Passenger P) {
+        return peopleService.login(P);
     }
 
 }
