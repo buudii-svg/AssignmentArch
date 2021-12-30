@@ -1,18 +1,18 @@
 package com.example.demo.application;
 
 import java.util.List;
-import com.example.demo.Core.User;
+import com.example.demo.observers.Passenger;
 
 public interface IPeopleService {
-    boolean add(User User);
+    boolean add(Passenger P);
 
-    User get(String name);
+    Passenger get(String name);
 
-    List<User> getAll();
+    List<Passenger> getAll();
 
     boolean delete(String name);
 
-    boolean update(User user);
+    boolean update(Passenger P);
 
-    boolean login(User u);
+    boolean login(Passenger P);
 }

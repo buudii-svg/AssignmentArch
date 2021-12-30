@@ -2,53 +2,50 @@ package com.example.demo.Persistence;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.example.demo.Core.Ride;
-import com.example.demo.Core.User;
+import com.example.demo.observers.Passenger;
 
 public class ArrayPeoplePersistence implements PeoplePersistence {
-    private static List<User> users = new ArrayList<User>();
+    private static List<Passenger> passengers = new ArrayList<Passenger>();
 
     @Override
-    public boolean add(User user) {
-        return users.add(user);
+    public boolean add(Passenger P) {
+        return passengers.add(P);
     }
 
     public int getNextId() {
-        return users.size();
+        return passengers.size();
     }
 
     @Override
-    public User get(String name) {
-        for (User user : users) {
-            if (user.getName().equals(name)) {
-                return user;
+    public Passenger get(String name) {
+        for (Passenger P : passengers) {
+            if (P.getName().equals(name)) {
+                return P;
             }
         }
         return null;
     }
 
     @Override
-    public List<User> getAll() {
-        return users;
+    public List<Passenger> getAll() {
+        return passengers;
     }
 
     @Override
     public boolean delete(String name) {
-        for (User user : users) {
-            if (user.getName().equals(name)) {
-                return users.remove(user);
+        for (Passenger P : passengers) {
+            if (P.getName().equals(name)) {
+                return passengers.remove(P);
             }
         }
-
         return false;
     }
 
     @Override
-    public boolean update(User u) {
-        for (User user : users) {
-            if (user.getName().equals(u.getName())) {
-                user.setAge(u.getAge());
+    public boolean update(Passenger P) {
+        for (Passenger user : passengers) {
+            if (user.getName().equals(P.getName())) {
+                user.setAge(P.getAge());
                 return true;
             }
         }
@@ -56,9 +53,9 @@ public class ArrayPeoplePersistence implements PeoplePersistence {
     }
 
     @Override
-    public boolean login(User u) {
-        for (User user : users) {
-            if ( user.getPassword().equals(u.getPassword()) && user.getId() == u.getId()) {
+    public boolean login(Passenger P) {
+        for (Passenger user : passengers) {
+            if (user.getPassword().equals(P.getPassword()) && user.getId() == P.getId()) {
                 return true;
             }
         }

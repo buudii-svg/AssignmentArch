@@ -1,14 +1,8 @@
 package com.example.demo.Controllers;
 
-import java.net.http.HttpResponse;
-import java.util.ArrayList;
 import java.util.List;
-
-import com.example.demo.Core.User;
 import com.example.demo.Core.Ride;
-import com.example.demo.application.IPeopleService;
 import com.example.demo.application.IRidesService;
-import com.example.demo.application.PeopleService;
 import com.example.demo.application.RidesService;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -18,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.HttpClientErrorException.NotFound;
 
 @RestController
 public class RideController {
@@ -39,12 +32,10 @@ public class RideController {
         return service.get(id);
     }
 
-
-     @PutMapping("/rides/ridesHistory/{id}/addRate")
-     public boolean addRate(@RequestBody Ride r) {
+    @PutMapping("/rides/ridesHistory/{id}/addRate")
+    public boolean addRate(@RequestBody Ride r) {
         return service.addRate(r);
-     }
-
+    }
 
     @DeleteMapping("/rides/{id}/delete")
     public boolean delete(@PathVariable int id) {
@@ -52,8 +43,7 @@ public class RideController {
     }
 
     @GetMapping("/rides/ridesHistory/{userId}")
-    public List<Ride> getRideHistory(@PathVariable int userId)
-    {
-        return service.getRideHistory(userId); 
+    public List<Ride> getRideHistory(@PathVariable int userId) {
+        return service.getRideHistory(userId);
     }
 }
