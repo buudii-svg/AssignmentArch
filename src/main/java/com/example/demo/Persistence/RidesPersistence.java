@@ -2,6 +2,7 @@ package com.example.demo.Persistence;
 
 import java.util.List;
 
+import com.example.demo.Offer;
 import com.example.demo.Core.Ride;
 
 public interface RidesPersistence {
@@ -19,4 +20,6 @@ public interface RidesPersistence {
     List<Ride> getRideHistory(int userId);
 
     boolean addRate(Ride r);
+
+    // List<Offer> getOffers(Ride r);
 }

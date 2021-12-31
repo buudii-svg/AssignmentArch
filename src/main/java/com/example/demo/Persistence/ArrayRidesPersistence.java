@@ -3,6 +3,7 @@ package com.example.demo.Persistence;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.demo.Offer;
 import com.example.demo.Core.Ride;
 
 public class ArrayRidesPersistence implements RidesPersistence {
@@ -64,5 +65,10 @@ public class ArrayRidesPersistence implements RidesPersistence {
         }
         return false;
     }
+
+    // public List<Offer> getOffers(Ride r)
+    // {
+    //     return r.getOffers();
+    // }
 
 }

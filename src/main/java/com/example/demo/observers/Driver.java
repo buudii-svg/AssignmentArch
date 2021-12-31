@@ -6,7 +6,6 @@ public class Driver extends User implements DriverObserver {
 
     private String driverLicense;
     private String national_Id;
-    private int userID;
     // private ArrayList<FavouriteArea> favAreas;
     private boolean pending = true;
     private double driverBalance;
@@ -27,15 +26,6 @@ public class Driver extends User implements DriverObserver {
     public void setPending(boolean pending) {
         this.pending = pending;
     }
-
-    public int getUserID() {
-        return userID;
-    }
-
-    public void setUserID(int userID) {
-        this.userID = userID;
-    }
-
     public Driver(int age, String name, String mobileNum, String email, String password, String driverLicense,
             String national_Id) {
         super(age, name, mobileNum, email, password);
