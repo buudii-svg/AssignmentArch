@@ -39,7 +39,7 @@ public class DriverController {
     }
 
     @DeleteMapping("/driver/{id}/delete")
-    public boolean update(@PathVariable int id) {
+    public boolean delete(@PathVariable int id) {
         return driverService.delete(id);
     }
 

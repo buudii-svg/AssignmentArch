@@ -7,7 +7,7 @@ public interface DriverPersistence {
 
     public boolean add(Driver d);
 
-    public Driver get(String name);
+    public Driver get(int id);
 
     public List<Driver> getAll();
 

@@ -7,7 +7,7 @@ public interface PeoplePersistence {
 
     public boolean add(Passenger P);
 
-    public Passenger get(String name);
+    public Passenger get(int id);
 
     public List<Passenger> getAll();
 

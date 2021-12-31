@@ -22,9 +22,9 @@ public class PeopleController {
         return peopleService.getAll();
     }
 
-    @GetMapping("/passenger/{name}")
-    public Passenger get(@PathVariable String name) {
-        return peopleService.get(name);
+    @GetMapping("/passenger/{id}")
+    public Passenger get(@PathVariable int id) {
+        return peopleService.get(id);
     }
 
     @PostMapping("/passenger")

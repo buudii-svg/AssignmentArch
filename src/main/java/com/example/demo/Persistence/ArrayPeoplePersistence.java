@@ -17,9 +17,9 @@ public class ArrayPeoplePersistence implements PeoplePersistence {
     }
 
     @Override
-    public Passenger get(String name) {
+    public Passenger get(int id) {
         for (Passenger P : passengers) {
-            if (P.getName().equals(name)) {
+            if (P.getId() == id) {
                 return P;
             }
         }
@@ -46,6 +46,11 @@ public class ArrayPeoplePersistence implements PeoplePersistence {
         for (Passenger user : passengers) {
             if (user.getName().equals(P.getName())) {
                 user.setAge(P.getAge());
+                user.getMobileNum().equals(P.getMobileNum());
+                user.getEmail().equals(P.getEmail());
+                user.getPassword().equals(P.getPassword());
+                user.setId(P.getId());
+                user.getRideHistory().equals(P.getRideHistory());
                 return true;
             }
         }

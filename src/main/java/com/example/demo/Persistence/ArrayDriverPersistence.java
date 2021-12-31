@@ -17,9 +17,9 @@ public class ArrayDriverPersistence implements DriverPersistence {
     }
 
     @Override
-    public Driver get(String name) {
+    public Driver get(int id) {
         for (Driver d : drivers) {
-            if (d.getName().equals(name)) {
+            if (d.getId() == id) {
                 return d;
             }
         }
@@ -46,6 +46,14 @@ public class ArrayDriverPersistence implements DriverPersistence {
         for (Driver driver : drivers) {
             if (driver.getName().equals(d.getName())) {
                 driver.setAge(d.getAge());
+                driver.getMobileNum().equals(d.getMobileNum());
+                driver.getEmail().equals(d.getEmail());
+                driver.getPassword().equals(d.getPassword());
+                driver.setId(d.getId());
+                driver.setDriverBalance(d.getDriverBalance());
+                driver.getRideHistory().equals(d.getRideHistory());
+                driver.getDriverLicense().equals(d.getDriverLicense());
+                driver.getNational_Id().equals(d.getNational_Id());
                 return true;
             }
         }
