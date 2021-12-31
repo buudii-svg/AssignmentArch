@@ -13,7 +13,7 @@ public interface DriverPersistence {
 
     public int getNextId();
 
-    public boolean delete(String name);
+    public boolean delete(int id);
 
     public boolean update(Driver d);
 

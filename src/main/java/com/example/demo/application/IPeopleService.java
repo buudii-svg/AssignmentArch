@@ -10,7 +10,7 @@ public interface IPeopleService {
 
     List<Passenger> getAll();
 
-    boolean delete(String name);
+    boolean delete(int id);
 
     boolean update(Passenger P);
 

@@ -21,8 +21,8 @@ public class DriverService implements IDriverService {
         return persistence.getAll();
     }
 
-    public boolean delete(String name) {
-        return persistence.delete(name);
+    public boolean delete(int id) {
+        return persistence.delete(id);
     }
 
     public boolean update(Driver d) {

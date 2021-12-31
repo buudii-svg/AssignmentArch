@@ -32,9 +32,9 @@ public class ArrayPeoplePersistence implements PeoplePersistence {
     }
 
     @Override
-    public boolean delete(String name) {
+    public boolean delete(int id) {
         for (Passenger P : passengers) {
-            if (P.getName().equals(name)) {
+            if (P.getId() == id) {
                 return passengers.remove(P);
             }
         }

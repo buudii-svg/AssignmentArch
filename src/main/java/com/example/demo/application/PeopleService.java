@@ -22,8 +22,8 @@ public class PeopleService implements IPeopleService {
         return persistence.getAll();
     }
 
-    public boolean delete(String name) {
-        return persistence.delete(name);
+    public boolean delete(int id) {
+        return persistence.delete(id);
     }
 
     public boolean update(Passenger P) {

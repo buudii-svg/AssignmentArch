@@ -1,31 +1,45 @@
 package com.example.demo;
 
+import java.util.ArrayList;
+
+import com.example.demo.Persistence.ArrayDriverPersistence;
+import com.example.demo.Persistence.DriverPersistence;
+import com.example.demo.application.DriverService;
+import com.example.demo.application.IDriverService;
 import com.example.demo.application.IPeopleService;
 import com.example.demo.application.PeopleService;
 import com.example.demo.observers.Driver;
 
 public class Admin {
 
-    private IPeopleService peopleService = new PeopleService();
+    ArrayList<Driver> pendingRegistrations = new ArrayList<>();
+    DriverPersistence dp = new ArrayDriverPersistence();
 
+ 
 
-    public void listDriverPendingRegisteration()
+    public ArrayList<Driver> listDriverPendingRegisteration()
     {
-        
+        for(Driver d : dp.getAll())
+        {
+             if(d.isPending() == true)
+             {
+                 pendingRegistrations.add(d);
+             }
+        }
+        return pendingRegistrations;
     }
 
-    // public void verifyDriver() {
-    //     if (peopleService.getUser() instanceof Driver) {
-    //         if (((Driver) peopleService.getUser()).isPending()) {
-    //             ((Driver) peopleService.getUser()).setPending(false);
-    //             System.out.println("admin has accepted your registeration");
-    //         }
-    //     }
-    // }
+    public boolean verifyDriver(int id) {
+        for(Driver d : pendingRegistrations)
+        {
+            if(d.getId() == id)
+            {
+                d.setPending(false);
+                pendingRegistrations.remove(d);
+                return true;
+            }
+        }
+        return false;
+    }
 
-    // public void listDriverPendingRegisteration() {
-    //     for (int i = 0; i < peopleService.getPendingReg().size(); i++) {
-    //         System.out.println(peopleService.getPendingReg().get(i).getName());
-    //     }
-    // }
 }
