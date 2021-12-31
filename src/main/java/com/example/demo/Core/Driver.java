@@ -1,8 +1,9 @@
-package com.example.demo.observers;
+package com.example.demo.Core;
 
 import java.util.ArrayList;
 
-import com.example.demo.Core.User;
+import com.example.demo.observers.DriverObserver;
+import com.example.demo.observers.FavouriteArea;
 
 public class Driver extends User implements DriverObserver {
 

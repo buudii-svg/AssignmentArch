@@ -1,9 +1,10 @@
 package com.example.demo.Controllers;
 
 import java.util.List;
+
+import com.example.demo.Core.Passenger;
 import com.example.demo.application.IPeopleService;
 import com.example.demo.application.PeopleService;
-import com.example.demo.observers.Passenger;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

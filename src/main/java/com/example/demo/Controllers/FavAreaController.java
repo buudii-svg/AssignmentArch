@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.example.demo.observers.FavouriteArea;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,6 +25,15 @@ public class FavAreaController {
         favAreas.add(fArea);
         return true;
     }
+
+    // @GetMapping("/favArea/{driverId}")
+    // public ArrayList<FavouriteArea> listAllFavAreas(@PathVariable int driverId)
+    // {
+    //     for(FavouriteArea fArea : favAreas)
+    //     {
+            
+    //     }
+    // }
 
     
 }

@@ -3,10 +3,10 @@ package com.example.demo.application;
 import java.util.List;
 
 import com.example.demo.Offer;
+import com.example.demo.Core.Driver;
 import com.example.demo.Core.Ride;
 import com.example.demo.Persistence.ArrayRidesPersistence;
 import com.example.demo.Persistence.RidesPersistence;
-import com.example.demo.observers.Driver;
 
 public class RidesService implements IRidesService {
     private RidesPersistence persistence = new ArrayRidesPersistence();

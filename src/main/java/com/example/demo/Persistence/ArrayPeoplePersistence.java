@@ -2,7 +2,8 @@ package com.example.demo.Persistence;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.example.demo.observers.Passenger;
+
+import com.example.demo.Core.Passenger;
 
 public class ArrayPeoplePersistence implements PeoplePersistence {
     private static List<Passenger> passengers = new ArrayList<Passenger>();

@@ -1,7 +1,8 @@
 package com.example.demo.Persistence;
 
 import java.util.List;
-import com.example.demo.observers.Passenger;
+
+import com.example.demo.Core.Passenger;
 
 public interface PeoplePersistence {
 

@@ -2,9 +2,9 @@ package com.example.demo.application;
 
 import java.util.List;
 
+import com.example.demo.Core.Passenger;
 import com.example.demo.Persistence.ArrayPeoplePersistence;
 import com.example.demo.Persistence.PeoplePersistence;
-import com.example.demo.observers.Passenger;
 
 public class PeopleService implements IPeopleService {
     private PeoplePersistence persistence = new ArrayPeoplePersistence();

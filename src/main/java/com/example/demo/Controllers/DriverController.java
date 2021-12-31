@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.demo.Offer;
+import com.example.demo.Core.Driver;
 import com.example.demo.application.DriverService;
 import com.example.demo.application.IDriverService;
-import com.example.demo.observers.Driver;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

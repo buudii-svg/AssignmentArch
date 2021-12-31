@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.demo.Offer;
+import com.example.demo.Core.Driver;
 import com.example.demo.Core.Ride;
-import com.example.demo.observers.Driver;
 
 public class ArrayDriverPersistence implements DriverPersistence {
     private static List<Driver> drivers = new ArrayList<Driver>();

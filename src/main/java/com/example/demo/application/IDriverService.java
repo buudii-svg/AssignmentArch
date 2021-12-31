@@ -3,7 +3,7 @@ package com.example.demo.application;
 import java.util.List;
 
 import com.example.demo.Offer;
-import com.example.demo.observers.Driver;
+import com.example.demo.Core.Driver;
 
 public interface IDriverService {
     boolean add(Driver d);

@@ -1,7 +1,8 @@
 package com.example.demo.application;
 
 import java.util.List;
-import com.example.demo.observers.Passenger;
+
+import com.example.demo.Core.Passenger;
 
 public interface IPeopleService {
     boolean add(Passenger P);

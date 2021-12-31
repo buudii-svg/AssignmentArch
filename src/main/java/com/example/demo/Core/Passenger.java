@@ -1,9 +1,9 @@
-package com.example.demo.observers;
+package com.example.demo.Core;
 
 import java.util.ArrayList;
 
 import com.example.demo.Offer;
-import com.example.demo.Core.User;
+import com.example.demo.observers.PassengerObserver;
 
 public class Passenger extends User implements PassengerObserver {
 

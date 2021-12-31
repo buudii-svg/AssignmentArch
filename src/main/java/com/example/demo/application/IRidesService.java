@@ -3,8 +3,8 @@ package com.example.demo.application;
 import java.util.List;
 
 import com.example.demo.Offer;
+import com.example.demo.Core.Driver;
 import com.example.demo.Core.Ride;
-import com.example.demo.observers.Driver;
 
 public interface IRidesService {
     boolean add(Ride person);

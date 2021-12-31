@@ -2,6 +2,8 @@ package com.example.demo.observers;
 
 import java.util.ArrayList;
 
+import com.example.demo.Core.Driver;
+
 public class FavouriteArea implements FavAreaSubject {
     private String name;
     private ArrayList<DriverObserver> observers;

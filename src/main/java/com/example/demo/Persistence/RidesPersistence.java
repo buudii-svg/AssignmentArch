@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.example.demo.Offer;
 import com.example.demo.Core.Ride;
-import com.example.demo.observers.Driver;
 
 public interface RidesPersistence {
 
