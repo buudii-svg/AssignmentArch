@@ -38,4 +38,10 @@ public class RidesService implements IRidesService {
     public boolean addRate(Ride r) {
         return persistence.addRate(r);
     }
+
+    public boolean requestRide(String source, String dest, Ride r)
+        {
+        return persistence.requestRide(source, dest,r);
+    }
+
 }

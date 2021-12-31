@@ -16,4 +16,5 @@ public interface IRidesService {
 
     public boolean addRate(Ride r);
 
+    boolean requestRide(String source, String dest, Ride r);
 }

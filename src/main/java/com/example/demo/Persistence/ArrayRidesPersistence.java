@@ -66,6 +66,13 @@ public class ArrayRidesPersistence implements RidesPersistence {
         return false;
     }
 
+    public boolean requestRide(String source, String dest, Ride r)
+    {
+        r.setDest(dest);
+        r.setSource(source);
+        add(r);
+        return true;
+    }
     // public List<Offer> getOffers(Ride r)
     // {
     //     return r.getOffers();

@@ -46,4 +46,9 @@ public class RideController {
     public List<Ride> getRideHistory(@PathVariable int userId) {
         return service.getRideHistory(userId);
     }
+
+    @PostMapping("/rides/requestRide")
+    public boolean requestRide(@RequestBody Ride r) {
+        return service.requestRide(r.getSource(),r.getDest(), r);
+    }
 }
