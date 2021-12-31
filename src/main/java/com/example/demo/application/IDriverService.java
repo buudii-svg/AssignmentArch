@@ -7,7 +7,7 @@ import com.example.demo.observers.Driver;
 public interface IDriverService {
     boolean add(Driver d);
 
-    Driver get(String name);
+    Driver get(int id);
 
     List<Driver> getAll();
 

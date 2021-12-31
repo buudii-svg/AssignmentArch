@@ -23,9 +23,9 @@ public class DriverController {
         return driverService.getAll();
     }
 
-    @GetMapping("/driver/{name}")
-    public Driver get(@PathVariable String name) {
-        return driverService.get(name);
+    @GetMapping("/driver/{id}")
+    public Driver get(@PathVariable int id) {
+        return driverService.get(id);
     }
 
     @PostMapping("/driver")

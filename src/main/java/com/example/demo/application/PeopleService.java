@@ -14,8 +14,8 @@ public class PeopleService implements IPeopleService {
         return persistence.add(P);
     }
 
-    public Passenger get(String name) {
-        return (Passenger) persistence.get(name);
+    public Passenger get(int id) {
+        return (Passenger) persistence.get(id);
     }
 
     public List<Passenger> getAll() {
@@ -37,38 +37,38 @@ public class PeopleService implements IPeopleService {
     // private User user;
 
     // public ArrayList<User> getPendingReg() {
-    //     return pendingReg;
+    // return pendingReg;
     // }
 
     // private ArrayList<User> pendingReg = new ArrayList<User>();
 
     // public void setPendingReg(User user) {
-    //     pendingReg.add(user);
+    // pendingReg.add(user);
     // }
 
     // public void setUser(User user) {
-    //     this.user = user;
+    // this.user = user;
     // }
 
     // public User getUser() {
-    //     return user;
+    // return user;
     // }
 
     // // Persistance persistance = new UserSavings();
 
     // public void register() {
-    //     if (user instanceof Driver) {
-    //         if (((Driver) user).isPending() == false) {
-    //             // persistance.create(user);
-    //         } else {
-    //             // do nothing
-    //         }
-    //     } else {
-    //         // persistance.create(user);
-    //     }
+    // if (user instanceof Driver) {
+    // if (((Driver) user).isPending() == false) {
+    // // persistance.create(user);
+    // } else {
+    // // do nothing
+    // }
+    // } else {
+    // // persistance.create(user);
+    // }
     // }
 
     // public void login() {
-    //     // persistance.read(user);
+    // // persistance.read(user);
     // }
 }

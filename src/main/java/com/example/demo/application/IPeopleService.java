@@ -6,7 +6,7 @@ import com.example.demo.observers.Passenger;
 public interface IPeopleService {
     boolean add(Passenger P);
 
-    Passenger get(String name);
+    Passenger get(int id);
 
     List<Passenger> getAll();
 

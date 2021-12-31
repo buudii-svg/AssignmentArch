@@ -13,8 +13,8 @@ public class DriverService implements IDriverService {
         return persistence.add(d);
     }
 
-    public Driver get(String name) {
-        return (Driver) persistence.get(name);
+    public Driver get(int id) {
+        return (Driver) persistence.get(id);
     }
 
     public List<Driver> getAll() {
