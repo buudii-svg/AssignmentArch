@@ -26,4 +26,6 @@ public interface RidesPersistence {
 
     public List<Offer> getAllOffers(int rideId);
 
+    public double calcETA();
+
 }

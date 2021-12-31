@@ -21,6 +21,8 @@ public interface IRidesService {
 
     boolean requestRide(String source, String dest, Ride r);
     
+    public double calcETA();
+
     // public boolean addOffer(int rideId, Offer offer, Driver d);
 
     // public List<Offer> getAllOffers(int rideId);

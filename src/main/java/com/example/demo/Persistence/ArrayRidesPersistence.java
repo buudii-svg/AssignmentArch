@@ -3,10 +3,12 @@ package com.example.demo.Persistence;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.demo.Calculator;
+import com.example.demo.Harvesine;
 import com.example.demo.Offer;
+import com.example.demo.googleMapsApi;
 import com.example.demo.Controllers.FavAreaController;
 import com.example.demo.Core.Ride;
-import com.example.demo.observers.Driver;
 import com.example.demo.observers.FavouriteArea;
 
 public class ArrayRidesPersistence implements RidesPersistence {
@@ -14,6 +16,7 @@ public class ArrayRidesPersistence implements RidesPersistence {
     private static List<Ride> allRides = new ArrayList<Ride>();
     private FavouriteArea fArea = new FavouriteArea();
     private FavAreaController fController = new FavAreaController();
+    private static int callsCounter = 0;
 
     @Override
     public int getNextId() {
@@ -82,34 +85,38 @@ public class ArrayRidesPersistence implements RidesPersistence {
 
     // public boolean addOffer(int rideId,Offer offer, Driver d)
     // {
-    //     for(Ride r : allRides)
-    //     {
-    //         if(rideId == r.getId())
-    //         {
-    //             offer.setDriver(d);
-    //             r.setOffers(offer);
-    //             return true;
-    //         }
-    //     }
-    //     return false;
+    // for(Ride r : allRides)
+    // {
+    // if(rideId == r.getId())
+    // {
+    // offer.setDriver(d);
+    // r.setOffers(offer);
+    // return true;
+    // }
+    // }
+    // return false;
     // }
 
-    public List<Offer> getAllOffers(int rideId)
-    {
-        for(Ride r: allRides)
-        {
-            if(rideId == r.getId())
-            {
+    public List<Offer> getAllOffers(int rideId) {
+        for (Ride r : allRides) {
+            if (rideId == r.getId()) {
                 return r.getOffers();
             }
         }
         return null;
     }
+
+    public double calcETA() {
+        Calculator calc = new googleMapsApi();
+        if (callsCounter > 6) {
+            calc = new Harvesine(20, 20);
+            return calc.calculateETA();
+        }
+        callsCounter++;
+        return calc.calculateETA();
+    }
     // public List<Offer> getOffers(Ride r)
     // {
     // return r.getOffers();
     // }
-
-
-
 }

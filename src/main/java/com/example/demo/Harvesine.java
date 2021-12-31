@@ -5,8 +5,7 @@ public class Harvesine implements Calculator {
     private double distance;
     private double speed;
 
-    public Harvesine(double time, double distance, double speed) {
-        this.time = time;
+    public Harvesine( double distance, double speed) {
         this.distance = distance;
         this.speed = speed;
     }

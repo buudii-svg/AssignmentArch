@@ -46,6 +46,11 @@ public class RidesService implements IRidesService {
         return persistence.requestRide(source, dest,r);
     }
 
+    public double calcETA()
+    {
+        return persistence.calcETA();
+    }
+
     // public boolean addOffer(int rideId, Offer offer, Driver d)
     // {
     //     return persistence.addOffer(rideId, offer, d);
