@@ -11,7 +11,7 @@ public interface IDriverService {
 
     List<Driver> getAll();
 
-    boolean delete(String name);
+    boolean delete(int id);
 
     boolean update(Driver d);
 

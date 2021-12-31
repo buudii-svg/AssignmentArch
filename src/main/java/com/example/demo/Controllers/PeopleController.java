@@ -37,9 +37,9 @@ public class PeopleController {
         return peopleService.update(P);
     }
 
-    @DeleteMapping("/passenger/{name}/delete")
-    public boolean update(@PathVariable String name) {
-        return peopleService.delete(name);
+    @DeleteMapping("/passenger/{id}/delete")
+    public boolean delete(@PathVariable int id) {
+        return peopleService.delete(id);
     }
 
     @PostMapping("/passenger/login")

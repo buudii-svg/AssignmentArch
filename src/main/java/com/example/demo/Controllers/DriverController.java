@@ -38,9 +38,9 @@ public class DriverController {
         return driverService.update(d);
     }
 
-    @DeleteMapping("/driver/{name}/delete")
-    public boolean update(@PathVariable String name) {
-        return driverService.delete(name);
+    @DeleteMapping("/driver/{id}/delete")
+    public boolean update(@PathVariable int id) {
+        return driverService.delete(id);
     }
 
     @PostMapping("/driver/login")

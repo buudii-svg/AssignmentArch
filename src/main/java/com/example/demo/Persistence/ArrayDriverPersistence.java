@@ -32,9 +32,9 @@ public class ArrayDriverPersistence implements DriverPersistence {
     }
 
     @Override
-    public boolean delete(String name) {
+    public boolean delete(int id) {
         for (Driver d : drivers) {
-            if (d.getName().equals(name)) {
+            if (d.getId() == id) {
                 return drivers.remove(d);
             }
         }
