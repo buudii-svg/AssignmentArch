@@ -1,6 +1,8 @@
 package com.example.demo.Persistence;
 
 import java.util.List;
+
+import com.example.demo.Offer;
 import com.example.demo.observers.Driver;
 
 public interface DriverPersistence {
@@ -18,5 +20,7 @@ public interface DriverPersistence {
     public boolean update(Driver d);
 
     public boolean login(Driver d);
+
+    public boolean addOffer(Offer offer, int rideId);
 
 }

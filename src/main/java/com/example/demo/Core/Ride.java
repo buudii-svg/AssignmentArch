@@ -2,7 +2,9 @@ package com.example.demo.Core;
 
 import java.util.ArrayList;
 
+import com.example.demo.Calculator;
 import com.example.demo.Offer;
+import com.example.demo.googleMapsApi;
 import com.example.demo.observers.PassengerObserver;
 import com.example.demo.observers.RideSubject;
 
@@ -17,6 +19,7 @@ public class Ride implements RideSubject {
     private int passengerId;
     private int driverId;
     private boolean status;
+    private Calculator calc = new googleMapsApi();
     public Ride(String source, String dest, int passengerId) {
         this.source = source;
         this.dest = dest;
@@ -25,17 +28,19 @@ public class Ride implements RideSubject {
         observers = new ArrayList<>();
     }
 
-    public void isFinished()
-    {
+    public void setCalc(Calculator calc) {
+        this.calc = calc;
+    }
+
+    public void isFinished() {
         this.status = false;
     }
-    public void isStarted()
-    {
+
+    public void isStarted() {
         this.status = true;
     }
 
-    public boolean getStatus()
-    {
+    public boolean getStatus() {
         return status;
     }
 
@@ -84,10 +89,10 @@ public class Ride implements RideSubject {
     }
 
     public void setOffers(Offer offer) {
-        if (offer != null) {
-            this.offers.add(offer);
-            notifyObservers();
-        }
+        // if (offer != null) {
+        offers.add(offer);
+        notifyObservers();
+        // }
     }
 
     public ArrayList<Offer> getOffers() {

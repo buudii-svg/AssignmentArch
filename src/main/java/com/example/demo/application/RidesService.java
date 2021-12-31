@@ -2,9 +2,11 @@ package com.example.demo.application;
 
 import java.util.List;
 
+import com.example.demo.Offer;
 import com.example.demo.Core.Ride;
 import com.example.demo.Persistence.ArrayRidesPersistence;
 import com.example.demo.Persistence.RidesPersistence;
+import com.example.demo.observers.Driver;
 
 public class RidesService implements IRidesService {
     private RidesPersistence persistence = new ArrayRidesPersistence();
@@ -43,5 +45,15 @@ public class RidesService implements IRidesService {
         {
         return persistence.requestRide(source, dest,r);
     }
+
+    // public boolean addOffer(int rideId, Offer offer, Driver d)
+    // {
+    //     return persistence.addOffer(rideId, offer, d);
+    // }
+
+    // public List<Offer> getAllOffers(int rideId)
+    // {
+    //     return persistence.getAllOffers(rideId);
+    // }
 
 }

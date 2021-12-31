@@ -1,7 +1,10 @@
 package com.example.demo.Controllers;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
+import com.example.demo.Offer;
 import com.example.demo.application.DriverService;
 import com.example.demo.application.IDriverService;
 import com.example.demo.observers.Driver;
@@ -46,6 +49,11 @@ public class DriverController {
     @PostMapping("/driver/login")
     public boolean login(@RequestBody Driver d) {
         return driverService.login(d);
+    }
+
+    @PostMapping("/driver/{rideId}/addOffer")
+    public boolean addOffer(@RequestBody Offer offer, @PathVariable int rideId) {
+        return driverService.addOffer(offer, rideId);
     }
 
 }

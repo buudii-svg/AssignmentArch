@@ -2,20 +2,27 @@ package com.example.demo;
 
 import com.example.demo.observers.Driver;
 
+
+
 public class Offer {
-    private double price;
-    private Driver driver;
+    private int price;
+    // private Driver driver;
 
-    public Offer(double price, Driver driver) {
+    public Offer() {}
+
+    public Offer(int price) {
         this.price = price;
-        this.driver = driver;
+        // this.driver = driver;
     }
 
-    public Driver getDriver() {
-        return driver;
-    }
+    // public void setDriver(Driver driver) {
+    //     // this.driver = driver;
+    // }
+    // public Driver getDriver() {
+    //     // return driver;
+    // }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 }

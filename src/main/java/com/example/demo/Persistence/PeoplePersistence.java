@@ -1,9 +1,6 @@
 package com.example.demo.Persistence;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import com.example.demo.Offer;
 import com.example.demo.observers.Passenger;
 
 public interface PeoplePersistence {

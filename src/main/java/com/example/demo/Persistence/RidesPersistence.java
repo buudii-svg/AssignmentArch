@@ -4,8 +4,7 @@ import java.util.List;
 
 import com.example.demo.Offer;
 import com.example.demo.Core.Ride;
-import com.example.demo.Core.User;
-import com.example.demo.observers.Passenger;
+import com.example.demo.observers.Driver;
 
 public interface RidesPersistence {
 
@@ -24,5 +23,7 @@ public interface RidesPersistence {
     boolean addRate(Ride r);
 
     public boolean requestRide(String source, String dest, Ride r);
-        // List<Offer> getOffers(Ride r);
+
+    public List<Offer> getAllOffers(int rideId);
+
 }

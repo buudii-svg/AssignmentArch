@@ -2,6 +2,7 @@ package com.example.demo.application;
 
 import java.util.List;
 
+import com.example.demo.Offer;
 import com.example.demo.observers.Driver;
 
 public interface IDriverService {
@@ -16,4 +17,6 @@ public interface IDriverService {
     boolean update(Driver d);
 
     boolean login(Driver d);
+
+    boolean addOffer(Offer offer, int rideId);
 }

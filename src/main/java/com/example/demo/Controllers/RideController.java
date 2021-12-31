@@ -1,9 +1,12 @@
 package com.example.demo.Controllers;
 
 import java.util.List;
+
+import com.example.demo.Offer;
 import com.example.demo.Core.Ride;
 import com.example.demo.application.IRidesService;
 import com.example.demo.application.RidesService;
+import com.example.demo.observers.Driver;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -51,4 +54,15 @@ public class RideController {
     public boolean requestRide(@RequestBody Ride r) {
         return service.requestRide(r.getSource(),r.getDest(), r);
     }
+    // @PostMapping("/ride/{rideId}/addOffer")
+    // public boolean addOffer(@PathVariable int rideId, Offer offer, Driver d)
+    // {
+    //     return service.addOffer(rideId, offer, d);
+    // }
+
+    // @PostMapping("/ride/{rideId}/getOffers")
+    // public List<Offer> getAllOffers(int rideId)
+    // {
+    //      return service.getAllOffers(rideId);
+    // }
 }

@@ -1,10 +1,7 @@
 package com.example.demo.Persistence;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.example.demo.Offer;
 import com.example.demo.observers.Passenger;
 
 public class ArrayPeoplePersistence implements PeoplePersistence {
@@ -70,5 +67,4 @@ public class ArrayPeoplePersistence implements PeoplePersistence {
         return false;
     }
 
-   
 }

@@ -1,12 +1,14 @@
 package com.example.demo.observers;
 
+import java.util.ArrayList;
+
 import com.example.demo.Core.User;
 
 public class Driver extends User implements DriverObserver {
 
     private String driverLicense;
     private String national_Id;
-    // private ArrayList<FavouriteArea> favAreas;
+    private ArrayList<FavouriteArea> favAreas;
     private boolean pending = true;
     private double driverBalance;
 
@@ -14,10 +16,17 @@ public class Driver extends User implements DriverObserver {
         return driverBalance;
     }
 
+    public void setFavArea(ArrayList<FavouriteArea> favAreas) {
+        this.favAreas = favAreas;
+    }
+
+    public ArrayList<FavouriteArea> getFavArea() {
+        return favAreas;
+    }
+
     public void setDriverBalance(double driverBalance) {
         this.driverBalance += driverBalance;
     }
-    // driver comment
 
     public boolean isPending() {
         return pending;
@@ -26,6 +35,7 @@ public class Driver extends User implements DriverObserver {
     public void setPending(boolean pending) {
         this.pending = pending;
     }
+
     public Driver(int age, String name, String mobileNum, String email, String password, String driverLicense,
             String national_Id) {
         super(age, name, mobileNum, email, password);
@@ -53,10 +63,9 @@ public class Driver extends User implements DriverObserver {
 
     @Override
     public void update(String area) {
-        // for (FavouriteArea i : favAreas)
-        // if (i.getName() == area) {
-        System.out.println("Fav Area detected" + area);
-        // }
-
+        for (FavouriteArea i : favAreas)
+            if (i.getName() == area) {
+                System.out.println("Fav Area detected" + area);
+            }
     }
 }
